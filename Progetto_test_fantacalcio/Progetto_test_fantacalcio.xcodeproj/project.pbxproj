@@ -13,6 +13,8 @@
 		77865D492A2DE48400F0F8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77865D472A2DE48400F0F8B4 /* Main.storyboard */; };
 		77865D4B2A2DE48500F0F8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 77865D4A2A2DE48500F0F8B4 /* Assets.xcassets */; };
 		77865D4E2A2DE48500F0F8B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77865D4C2A2DE48500F0F8B4 /* LaunchScreen.storyboard */; };
+		77BF37562A2DF5AC0050DF59 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF37542A2DF5AC0050DF59 /* List.storyboard */; };
+		77BF37582A2DF5D40050DF59 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF37572A2DF5D40050DF59 /* Favourites.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		77865D4A2A2DE48500F0F8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		77865D4D2A2DE48500F0F8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77865D4F2A2DE48500F0F8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77BF37552A2DF5AC0050DF59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Progetto_test_fantacalcio/Base.lproj/List.storyboard; sourceTree = "<group>"; };
+		77BF37572A2DF5D40050DF59 /* Favourites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		776DE91A2A2DF84800D39920 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				77BF37542A2DF5AC0050DF59 /* List.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		776DE91B2A2DF85000D39920 /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				77BF37572A2DF5D40050DF59 /* Favourites.storyboard */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
 		77865D352A2DE48400F0F8B4 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +79,8 @@
 				77865D412A2DE48400F0F8B4 /* AppDelegate.swift */,
 				77865D432A2DE48400F0F8B4 /* SceneDelegate.swift */,
 				77865D452A2DE48400F0F8B4 /* ViewController.swift */,
+				776DE91A2A2DF84800D39920 /* List */,
+				776DE91B2A2DF85000D39920 /* Favourites */,
 				77865D472A2DE48400F0F8B4 /* Main.storyboard */,
 				77865D4A2A2DE48500F0F8B4 /* Assets.xcassets */,
 				77865D4C2A2DE48500F0F8B4 /* LaunchScreen.storyboard */,
@@ -127,7 +149,9 @@
 			files = (
 				77865D4E2A2DE48500F0F8B4 /* LaunchScreen.storyboard in Resources */,
 				77865D4B2A2DE48500F0F8B4 /* Assets.xcassets in Resources */,
+				77BF37582A2DF5D40050DF59 /* Favourites.storyboard in Resources */,
 				77865D492A2DE48400F0F8B4 /* Main.storyboard in Resources */,
+				77BF37562A2DF5AC0050DF59 /* List.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +185,14 @@
 				77865D4D2A2DE48500F0F8B4 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		77BF37542A2DF5AC0050DF59 /* List.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77BF37552A2DF5AC0050DF59 /* Base */,
+			);
+			name = List.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
