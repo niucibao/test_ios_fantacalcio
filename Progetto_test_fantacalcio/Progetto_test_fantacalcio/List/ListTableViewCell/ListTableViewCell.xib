@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzL-zL-x8p">
-                        <rect key="frame" x="16" y="16" width="406" height="104"/>
+                        <rect key="frame" x="16" y="8" width="406" height="104"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E5D-5l-Tjs">
                                 <rect key="frame" x="8" y="8" width="102.66666666666667" height="88"/>
@@ -58,9 +58,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-nK-ftt">
+                                <rect key="frame" x="355.33333333333331" y="40" width="26.666666666666686" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="hlK-g5-QGP"/>
+                                    <constraint firstAttribute="width" secondItem="ARf-nK-ftt" secondAttribute="height" multiplier="10:9" id="qzo-Mx-3QA"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="star" catalog="system"/>
+                                <state key="selected" image="star.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="favouriteButtonDidPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ctl-Jp-bg6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ARf-nK-ftt" secondAttribute="trailing" constant="24" id="8em-tZ-G8y"/>
+                            <constraint firstItem="ARf-nK-ftt" firstAttribute="centerY" secondItem="nzL-zL-x8p" secondAttribute="centerY" id="EzB-HD-EXt"/>
                             <constraint firstItem="E5D-5l-Tjs" firstAttribute="top" secondItem="nzL-zL-x8p" secondAttribute="top" constant="8" id="Fie-2C-L6r"/>
                             <constraint firstItem="E5D-5l-Tjs" firstAttribute="leading" secondItem="nzL-zL-x8p" secondAttribute="leading" constant="8" id="RaQ-YU-fxb"/>
                             <constraint firstAttribute="bottom" secondItem="E5D-5l-Tjs" secondAttribute="bottom" constant="8" id="b3X-Cc-g28"/>
@@ -70,8 +85,8 @@
                 <constraints>
                     <constraint firstItem="nzL-zL-x8p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="B98-Vl-OaB"/>
                     <constraint firstAttribute="trailing" secondItem="nzL-zL-x8p" secondAttribute="trailing" constant="16" id="KW2-Pz-nkc"/>
-                    <constraint firstItem="nzL-zL-x8p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="bsk-5x-ldm"/>
-                    <constraint firstAttribute="bottom" secondItem="nzL-zL-x8p" secondAttribute="bottom" id="ks9-be-ZAe"/>
+                    <constraint firstItem="nzL-zL-x8p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="bsk-5x-ldm"/>
+                    <constraint firstAttribute="bottom" secondItem="nzL-zL-x8p" secondAttribute="bottom" constant="8" id="ks9-be-ZAe"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -85,4 +100,8 @@
             <point key="canvasLocation" x="229.00763358778624" y="46.478873239436624"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+    </resources>
 </document>

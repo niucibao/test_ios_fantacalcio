@@ -16,6 +16,8 @@ class ListTableViewCell: GenericTableViewCell {
         
         tableView.register(nib, forCellReuseIdentifier: ListTableViewCell.identifier)
     }
+    
+    @IBOutlet weak var favouriteButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +28,16 @@ class ListTableViewCell: GenericTableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setup(player: Player) {
+        self.playerName.text = player.playerName
+        self.playerTeam.text = player.teamAbbreviation
+        self.playerImage.imageFromServerURL(urlString: player.imageURL)
+    }
+    
+    @IBAction func favouriteButtonDidPressed(_ sender: UIButton) {
+        sender.isSelected.toggle()
     }
     
 }

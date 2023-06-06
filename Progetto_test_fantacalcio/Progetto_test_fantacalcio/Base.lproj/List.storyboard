@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s8P-HK-onr">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="AOz-fg-aY2">
+            <objects>
+                <viewController id="6wP-4e-Kxg" customClass="ListViewController" customModule="Progetto_test_fantacalcio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WfK-Y4-P7K">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dqV-Xi-ddl">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2M-zQ-vDe">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La ricerca non ha prodotto risultati." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB6-Qy-9YD">
+                                        <rect key="frame" x="0.0" y="347.33333333333331" width="393" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="nB6-Qy-9YD" firstAttribute="leading" secondItem="K2M-zQ-vDe" secondAttribute="leading" id="OCi-FB-NQw"/>
+                                    <constraint firstItem="nB6-Qy-9YD" firstAttribute="centerX" secondItem="K2M-zQ-vDe" secondAttribute="centerX" id="Y44-wn-Pgk"/>
+                                    <constraint firstItem="nB6-Qy-9YD" firstAttribute="centerY" secondItem="K2M-zQ-vDe" secondAttribute="centerY" id="mGK-nQ-Hfx"/>
+                                    <constraint firstAttribute="trailing" secondItem="nB6-Qy-9YD" secondAttribute="trailing" id="mop-uf-8ag"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6GI-NZ-qrg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6GI-NZ-qrg" firstAttribute="bottom" secondItem="dqV-Xi-ddl" secondAttribute="bottom" id="2sK-VO-fTA"/>
+                            <constraint firstItem="dqV-Xi-ddl" firstAttribute="leading" secondItem="6GI-NZ-qrg" secondAttribute="leading" id="4r3-mh-xhY"/>
+                            <constraint firstItem="K2M-zQ-vDe" firstAttribute="leading" secondItem="6GI-NZ-qrg" secondAttribute="leading" id="HLn-up-Rhs"/>
+                            <constraint firstItem="6GI-NZ-qrg" firstAttribute="trailing" secondItem="dqV-Xi-ddl" secondAttribute="trailing" id="Kdx-3x-JMs"/>
+                            <constraint firstItem="dqV-Xi-ddl" firstAttribute="top" secondItem="6GI-NZ-qrg" secondAttribute="top" id="XO3-Fk-aej"/>
+                            <constraint firstItem="6GI-NZ-qrg" firstAttribute="trailing" secondItem="K2M-zQ-vDe" secondAttribute="trailing" id="iLS-Cr-ido"/>
+                            <constraint firstItem="6GI-NZ-qrg" firstAttribute="bottom" secondItem="K2M-zQ-vDe" secondAttribute="bottom" id="r19-tj-BT3"/>
+                            <constraint firstItem="K2M-zQ-vDe" firstAttribute="top" secondItem="6GI-NZ-qrg" secondAttribute="top" id="riC-NR-UaZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="q0b-Wa-cMT"/>
+                    <connections>
+                        <outlet property="emptyView" destination="K2M-zQ-vDe" id="jqc-Rz-VJz"/>
+                        <outlet property="tableView" destination="dqV-Xi-ddl" id="Lhh-VN-lI1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ee3-SP-ABy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1400.7633587786258" y="-112.67605633802818"/>
+        </scene>
+        <!--Lista Calciatori-->
+        <scene sceneID="HHj-WW-6Li">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="s8P-HK-onr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lista Calciatori" image="person.fill" catalog="system" id="vng-cV-5O8"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Np5-Ch-4Ts">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6wP-4e-Kxg" kind="relationship" relationship="rootViewController" id="5s5-vy-F4y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lZ1-XE-Qp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="474.04580152671753" y="-112.67605633802818"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

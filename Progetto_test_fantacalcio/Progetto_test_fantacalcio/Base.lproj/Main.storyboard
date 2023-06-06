@@ -16,23 +16,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WEY-I4-QEp" kind="relationship" relationship="viewControllers" id="3tp-xg-4fl"/>
-                        <segue destination="CRs-rX-eyV" kind="relationship" relationship="viewControllers" id="Wzv-if-i71"/>
+                        <segue destination="oKC-Yf-VWh" kind="relationship" relationship="viewControllers" id="T3f-hp-SoC"/>
+                        <segue destination="CRs-rX-eyV" kind="relationship" relationship="viewControllers" id="Ek3-cH-Ha7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agE-GP-cgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-483" y="85"/>
-        </scene>
-        <!--List-->
-        <scene sceneID="U0d-I9-V1s">
-            <objects>
-                <viewControllerPlaceholder storyboardName="List" id="WEY-I4-QEp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lista Calciatori" image="person.fill" catalog="system" id="cfc-YI-d7V"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YwL-Cy-Sbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="421" y="-218"/>
         </scene>
         <!--Favourites-->
         <scene sceneID="xKs-1o-J9S">
@@ -44,9 +34,18 @@
             </objects>
             <point key="canvasLocation" x="420" y="364"/>
         </scene>
+        <!--List-->
+        <scene sceneID="czE-tp-MQz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="List" id="oKC-Yf-VWh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xdw-Or-36y"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="acs-RK-j3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="475" y="-112"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>
