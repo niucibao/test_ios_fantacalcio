@@ -13,4 +13,6 @@ struct Player : Codable {
     var imageURL: String
     var teamAbbreviation: String
     var averageGrade: Double
+    var averageFantaGrade: Double
+    var gamesPlayed: Int
 }

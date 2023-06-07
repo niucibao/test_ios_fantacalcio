@@ -11,14 +11,29 @@
         <!--Preferiti-->
         <scene sceneID="vHx-oW-2Eg">
             <objects>
-                <viewController id="EgI-p6-vZs" sceneMemberID="viewController">
+                <viewController id="EgI-p6-vZs" customClass="FavouritesViewController" customModule="Progetto_test_fantacalcio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dg3-Fh-Jg4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gwG-r3-Yna">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iLb-Q6-wsu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gwG-r3-Yna" firstAttribute="top" secondItem="iLb-Q6-wsu" secondAttribute="top" id="Kh7-d7-cew"/>
+                            <constraint firstItem="iLb-Q6-wsu" firstAttribute="trailing" secondItem="gwG-r3-Yna" secondAttribute="trailing" id="MoY-qr-3Xl"/>
+                            <constraint firstItem="iLb-Q6-wsu" firstAttribute="bottom" secondItem="gwG-r3-Yna" secondAttribute="bottom" id="jYr-t1-D7J"/>
+                            <constraint firstItem="gwG-r3-Yna" firstAttribute="leading" secondItem="iLb-Q6-wsu" secondAttribute="leading" id="reB-b1-hpU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Preferiti" image="star.fill" catalog="system" id="syC-mX-Af9"/>
+                    <connections>
+                        <outlet property="tableView" destination="gwG-r3-Yna" id="AWn-CG-trw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5o-u7-C8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

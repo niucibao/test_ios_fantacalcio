@@ -92,6 +92,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cornerView" destination="nzL-zL-x8p" id="htb-op-WVr"/>
+                <outlet property="favouriteButton" destination="ARf-nK-ftt" id="zWt-gL-tfU"/>
                 <outlet property="playerImage" destination="hk4-CW-tZE" id="pSe-I4-AHS"/>
                 <outlet property="playerImageBackground" destination="Ow9-wq-Plk" id="CQN-Uk-NrB"/>
                 <outlet property="playerName" destination="3Pn-Fv-yoq" id="eu2-Oy-QLn"/>

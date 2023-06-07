@@ -8,16 +8,14 @@
 import Foundation
 import UIKit
 
-protocol ListViewModelDelegate {
-    func dataShouldReload(isEmpty: Bool)
-}
-
 class ListViewModel: NSObject {
     
     var searchedText = ""
     private var players: [Player]?
     var filteredPlayers: [Player] = []
     var delegate: ListViewModelDelegate?
+    
+    var coreDataManager = CoreDataManager()
     
     func fetchData() {
         URLManager.getList { result in
@@ -60,14 +58,28 @@ extension ListViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.identifier, for: indexPath) as! ListTableViewCell
         
+        
         if searchedText != "" {
-            cell.setup(player: filteredPlayers[indexPath.row])
+            let player = filteredPlayers[indexPath.row]
+            cell.setup(player: player,
+                       isFavourite: coreDataManager.isFavourite(playerId: player.playerId))
         } else if let players = players {
-            cell.setup(player: players[indexPath.row])
+            let player = players[indexPath.row]
+            cell.setup(player: player,
+                       isFavourite: coreDataManager.isFavourite(playerId: player.playerId))
         }
         
+        cell.favouriteDidPressed = favouriteDidPressed
         return cell
         
+    }
+    
+    func favouriteDidPressed(player: Player, selected: Bool) {
+        if selected {
+            coreDataManager.createNewPlayer(player: player)
+        } else {
+            coreDataManager.deletePlayer(id: player.playerId)
+        }
     }
 
 }
