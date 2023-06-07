@@ -7,9 +7,10 @@
 
 import UIKit
 
-class FavouritesViewController: UIViewController {
+class FavouritesViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var emptyView: UIView!
     
     var viewModel = FavouriteViewModel()
 
@@ -17,8 +18,10 @@ class FavouritesViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.dataSource = viewModel
+        self.tableView.delegate = self
         
         FavouriteTableViewCell.registerNib(in: self.tableView)
+        FavouritesHeaderView.registerNib(in: self.tableView)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,6 +32,13 @@ class FavouritesViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
+        
+        self.emptyView.isHidden = !viewModel.manager.players.isEmpty
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: FavouritesHeaderView.identifier) as! FavouritesHeaderView
+        return header
     }
 
 }

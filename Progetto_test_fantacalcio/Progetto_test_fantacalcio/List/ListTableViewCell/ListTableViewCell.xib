@@ -93,10 +93,10 @@
             <connections>
                 <outlet property="cornerView" destination="nzL-zL-x8p" id="htb-op-WVr"/>
                 <outlet property="favouriteButton" destination="ARf-nK-ftt" id="zWt-gL-tfU"/>
-                <outlet property="playerImage" destination="hk4-CW-tZE" id="pSe-I4-AHS"/>
                 <outlet property="playerImageBackground" destination="Ow9-wq-Plk" id="CQN-Uk-NrB"/>
-                <outlet property="playerName" destination="3Pn-Fv-yoq" id="eu2-Oy-QLn"/>
-                <outlet property="playerTeam" destination="0MA-6W-hnf" id="mIM-h7-jwA"/>
+                <outlet property="playerImageView" destination="hk4-CW-tZE" id="Lg3-FG-gVB"/>
+                <outlet property="playerNameLabel" destination="3Pn-Fv-yoq" id="IrN-69-dZM"/>
+                <outlet property="playerTeamLabel" destination="0MA-6W-hnf" id="jfJ-jd-Sk5"/>
             </connections>
             <point key="canvasLocation" x="229.00763358778624" y="46.478873239436624"/>
         </tableViewCell>

@@ -35,9 +35,9 @@ class ListTableViewCell: GenericTableViewCell {
     
     func setup(player: Player, isFavourite: Bool) {
         self.player = player
-        self.playerName.text = player.playerName
-        self.playerTeam.text = player.teamAbbreviation
-        self.playerImage.imageFromServerURL(urlString: player.imageURL)
+        self.playerNameLabel.text = player.playerName
+        self.playerTeamLabel.text = player.teamAbbreviation
+        self.playerImageView.imageFromServerURL(urlString: player.imageURL)
         self.favouriteButton.isSelected = isFavourite
     }
     

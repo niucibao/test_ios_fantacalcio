@@ -29,6 +29,8 @@
 		7799E0C52A2F383700528E90 /* UIIMageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7799E0C42A2F383700528E90 /* UIIMageView+Extensions.swift */; };
 		7799E0CF2A2F458600528E90 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7799E0CD2A2F458600528E90 /* List.storyboard */; };
 		77BF37582A2DF5D40050DF59 /* Favourites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77BF37572A2DF5D40050DF59 /* Favourites.storyboard */; };
+		77C7C4A02A306492002616B1 /* FavouritesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77C7C49F2A306492002616B1 /* FavouritesHeaderView.xib */; };
+		77C7C4A22A3064C2002616B1 /* FavouritesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7C4A12A3064C2002616B1 /* FavouritesHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		7799E0C42A2F383700528E90 /* UIIMageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMageView+Extensions.swift"; sourceTree = "<group>"; };
 		7799E0CE2A2F458600528E90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Progetto_test_fantacalcio/Base.lproj/List.storyboard; sourceTree = "<group>"; };
 		77BF37572A2DF5D40050DF59 /* Favourites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favourites.storyboard; sourceTree = "<group>"; };
+		77C7C49F2A306492002616B1 /* FavouritesHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FavouritesHeaderView.xib; sourceTree = "<group>"; };
+		77C7C4A12A3064C2002616B1 /* FavouritesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		776374A12A305655000274EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7763749B2A2F8A92000274EA /* FavouritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		776374A22A305666000274EA /* FavouriteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7763749D2A2F8B1A000274EA /* FavouriteTableViewCell.swift */,
+				7763749E2A2F8B1A000274EA /* FavouriteTableViewCell.xib */,
+			);
+			path = FavouriteTableViewCell;
+			sourceTree = "<group>";
+		};
 		776DE91A2A2DF84800D39920 /* List */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				77BF37572A2DF5D40050DF59 /* Favourites.storyboard */,
-				7763749B2A2F8A92000274EA /* FavouritesViewModel.swift */,
+				776374A12A305655000274EA /* ViewModel */,
 				776374992A2F8A4E000274EA /* FavouritesViewController.swift */,
-				7763749D2A2F8B1A000274EA /* FavouriteTableViewCell.swift */,
-				7763749E2A2F8B1A000274EA /* FavouriteTableViewCell.xib */,
+				778F789D2A306480006780F6 /* FavouritesHeaderView */,
+				776374A22A305666000274EA /* FavouriteTableViewCell */,
 			);
 			path = Favourites;
 			sourceTree = "<group>";
@@ -163,6 +184,15 @@
 			path = Progetto_test_fantacalcio;
 			sourceTree = "<group>";
 		};
+		778F789D2A306480006780F6 /* FavouritesHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				77C7C49F2A306492002616B1 /* FavouritesHeaderView.xib */,
+				77C7C4A12A3064C2002616B1 /* FavouritesHeaderView.swift */,
+			);
+			path = FavouritesHeaderView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +256,7 @@
 				776374A02A2F8B1A000274EA /* FavouriteTableViewCell.xib in Resources */,
 				776DE9222A2DFA4200D39920 /* ListTableViewCell.xib in Resources */,
 				77865D4B2A2DE48500F0F8B4 /* Assets.xcassets in Resources */,
+				77C7C4A02A306492002616B1 /* FavouritesHeaderView.xib in Resources */,
 				77BF37582A2DF5D40050DF59 /* Favourites.storyboard in Resources */,
 				77865D492A2DE48400F0F8B4 /* Main.storyboard in Resources */,
 			);
@@ -239,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				776DE91D2A2DFA0700D39920 /* GenericTableViewCell.swift in Sources */,
+				77C7C4A22A3064C2002616B1 /* FavouritesHeaderView.swift in Sources */,
 				776374962A2F801F000274EA /* ListViewModelDelegate.swift in Sources */,
 				7799E0C52A2F383700528E90 /* UIIMageView+Extensions.swift in Sources */,
 				776DE9272A2E02F100D39920 /* ListViewModel.swift in Sources */,

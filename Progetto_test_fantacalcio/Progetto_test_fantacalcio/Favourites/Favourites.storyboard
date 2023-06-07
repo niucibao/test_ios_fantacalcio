@@ -20,24 +20,47 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5e-Vp-h8X">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nessun preferito." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-1Y-OHl">
+                                        <rect key="frame" x="24" y="369.33333333333331" width="345" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.44705882349999998" green="0.44705882349999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="aWG-1Y-OHl" secondAttribute="trailing" constant="24" id="Akg-Ze-FLk"/>
+                                    <constraint firstItem="aWG-1Y-OHl" firstAttribute="leading" secondItem="j5e-Vp-h8X" secondAttribute="leading" constant="24" id="Pch-KB-oSM"/>
+                                    <constraint firstItem="aWG-1Y-OHl" firstAttribute="centerX" secondItem="j5e-Vp-h8X" secondAttribute="centerX" id="ULI-n1-KsH"/>
+                                    <constraint firstItem="aWG-1Y-OHl" firstAttribute="centerY" secondItem="j5e-Vp-h8X" secondAttribute="centerY" id="ckF-oP-sJa"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iLb-Q6-wsu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="j5e-Vp-h8X" firstAttribute="leading" secondItem="iLb-Q6-wsu" secondAttribute="leading" id="5DH-FP-Xzy"/>
+                            <constraint firstItem="j5e-Vp-h8X" firstAttribute="bottom" secondItem="iLb-Q6-wsu" secondAttribute="bottom" id="7P6-DR-ADM"/>
+                            <constraint firstItem="j5e-Vp-h8X" firstAttribute="top" secondItem="iLb-Q6-wsu" secondAttribute="top" id="D5z-Ta-rQv"/>
                             <constraint firstItem="gwG-r3-Yna" firstAttribute="top" secondItem="iLb-Q6-wsu" secondAttribute="top" id="Kh7-d7-cew"/>
                             <constraint firstItem="iLb-Q6-wsu" firstAttribute="trailing" secondItem="gwG-r3-Yna" secondAttribute="trailing" id="MoY-qr-3Xl"/>
                             <constraint firstItem="iLb-Q6-wsu" firstAttribute="bottom" secondItem="gwG-r3-Yna" secondAttribute="bottom" id="jYr-t1-D7J"/>
                             <constraint firstItem="gwG-r3-Yna" firstAttribute="leading" secondItem="iLb-Q6-wsu" secondAttribute="leading" id="reB-b1-hpU"/>
+                            <constraint firstAttribute="trailing" secondItem="j5e-Vp-h8X" secondAttribute="trailing" id="x0S-K0-mFy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Preferiti" image="star.fill" catalog="system" id="syC-mX-Af9"/>
                     <connections>
+                        <outlet property="emptyView" destination="j5e-Vp-h8X" id="Gsc-UT-4mg"/>
                         <outlet property="tableView" destination="gwG-r3-Yna" id="AWn-CG-trw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5o-u7-C8X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="441"/>
+            <point key="canvasLocation" x="420.61068702290072" y="440.84507042253523"/>
         </scene>
     </scenes>
     <resources>

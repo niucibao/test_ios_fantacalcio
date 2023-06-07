@@ -11,11 +11,11 @@ class GenericTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cornerView: UIView!
     
-    @IBOutlet weak var playerImage: UIImageView!
+    @IBOutlet weak var playerImageView: UIImageView!
     @IBOutlet weak var playerImageBackground: UIView!
     
-    @IBOutlet weak var playerName: UILabel!
-    @IBOutlet weak var playerTeam: UILabel!
+    @IBOutlet weak var playerNameLabel: UILabel!
+    @IBOutlet weak var playerTeamLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
