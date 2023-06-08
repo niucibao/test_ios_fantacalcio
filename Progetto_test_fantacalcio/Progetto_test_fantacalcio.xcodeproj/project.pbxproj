@@ -44,7 +44,7 @@
 		776DE91C2A2DFA0700D39920 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		776DE91F2A2DFA4100D39920 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		776DE9202A2DFA4200D39920 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		776DE9242A2DFF1D00D39920 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListViewController.swift; path = Progetto_test_fantacalcio/ListViewController.swift; sourceTree = "<group>"; };
+		776DE9242A2DFF1D00D39920 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		776DE9262A2E02F100D39920 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		776DE9282A2E06BC00D39920 /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
 		776DE92A2A2E08E400D39920 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -73,19 +73,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		776374942A2F8001000274EA /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				776DE9262A2E02F100D39920 /* ListViewModel.swift */,
-				776374952A2F801F000274EA /* ListViewModelDelegate.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		776374A12A305655000274EA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7763749B2A2F8A92000274EA /* FavouritesViewModel.swift */,
+				77D7E6A12A31EA3200D109DA /* List */,
+				77D7E6A22A31EA4100D109DA /* Favourites */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -99,37 +91,10 @@
 			path = FavouriteTableViewCell;
 			sourceTree = "<group>";
 		};
-		776DE91A2A2DF84800D39920 /* List */ = {
-			isa = PBXGroup;
-			children = (
-				7799E0CD2A2F458600528E90 /* List.storyboard */,
-				776DE92C2A2E2ECC00D39920 /* Model */,
-				776374942A2F8001000274EA /* ViewModel */,
-				776DE9242A2DFF1D00D39920 /* ListViewController.swift */,
-				776DE9232A2DFA4A00D39920 /* ListTableViewCell */,
-			);
-			path = List;
-			sourceTree = "<group>";
-		};
-		776DE91B2A2DF85000D39920 /* Favourites */ = {
-			isa = PBXGroup;
-			children = (
-				77BF37572A2DF5D40050DF59 /* Favourites.storyboard */,
-				776374A12A305655000274EA /* ViewModel */,
-				776374992A2F8A4E000274EA /* FavouritesViewController.swift */,
-				778F789D2A306480006780F6 /* FavouritesHeaderView */,
-				776374A22A305666000274EA /* FavouriteTableViewCell */,
-			);
-			path = Favourites;
-			sourceTree = "<group>";
-		};
 		776DE91E2A2DFA1100D39920 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
 				7799E0C42A2F383700528E90 /* UIIMageView+Extensions.swift */,
-				776DE9282A2E06BC00D39920 /* URLManager.swift */,
-				776374922A2F798B000274EA /* CoreDataManager.swift */,
-				776DE91C2A2DFA0700D39920 /* GenericTableViewCell.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -172,13 +137,16 @@
 			children = (
 				77865D412A2DE48400F0F8B4 /* AppDelegate.swift */,
 				77865D432A2DE48400F0F8B4 /* SceneDelegate.swift */,
-				776DE91A2A2DF84800D39920 /* List */,
-				776DE91B2A2DF85000D39920 /* Favourites */,
-				776DE91E2A2DFA1100D39920 /* Utils */,
 				77865D472A2DE48400F0F8B4 /* Main.storyboard */,
-				7763748F2A2F7746000274EA /* Progetto_test_fantacalcio.xcdatamodeld */,
-				77865D4A2A2DE48500F0F8B4 /* Assets.xcassets */,
+				776DE92C2A2E2ECC00D39920 /* Model */,
+				77D7E69F2A31E9D400D109DA /* View */,
+				776374A12A305655000274EA /* ViewModel */,
+				77D7E6A02A31E9FA00D109DA /* Controller */,
+				77D7E6A52A31EA9B00D109DA /* Networking */,
+				77D7E6A62A31EAA700D109DA /* Persistence */,
+				776DE91E2A2DFA1100D39920 /* Utils */,
 				77865D4C2A2DE48500F0F8B4 /* LaunchScreen.storyboard */,
+				77865D4A2A2DE48500F0F8B4 /* Assets.xcassets */,
 				77865D4F2A2DE48500F0F8B4 /* Info.plist */,
 			);
 			path = Progetto_test_fantacalcio;
@@ -187,10 +155,82 @@
 		778F789D2A306480006780F6 /* FavouritesHeaderView */ = {
 			isa = PBXGroup;
 			children = (
-				77C7C49F2A306492002616B1 /* FavouritesHeaderView.xib */,
 				77C7C4A12A3064C2002616B1 /* FavouritesHeaderView.swift */,
+				77C7C49F2A306492002616B1 /* FavouritesHeaderView.xib */,
 			);
 			path = FavouritesHeaderView;
+			sourceTree = "<group>";
+		};
+		77D7E69F2A31E9D400D109DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				776DE91C2A2DFA0700D39920 /* GenericTableViewCell.swift */,
+				776374A22A305666000274EA /* FavouriteTableViewCell */,
+				778F789D2A306480006780F6 /* FavouritesHeaderView */,
+				776DE9232A2DFA4A00D39920 /* ListTableViewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77D7E6A02A31E9FA00D109DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				77D7E6A42A31EA6A00D109DA /* List */,
+				77D7E6A32A31EA5A00D109DA /* Favourites */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		77D7E6A12A31EA3200D109DA /* List */ = {
+			isa = PBXGroup;
+			children = (
+				776DE9262A2E02F100D39920 /* ListViewModel.swift */,
+				776374952A2F801F000274EA /* ListViewModelDelegate.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		77D7E6A22A31EA4100D109DA /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				7763749B2A2F8A92000274EA /* FavouritesViewModel.swift */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		77D7E6A32A31EA5A00D109DA /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				776374992A2F8A4E000274EA /* FavouritesViewController.swift */,
+				77BF37572A2DF5D40050DF59 /* Favourites.storyboard */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		77D7E6A42A31EA6A00D109DA /* List */ = {
+			isa = PBXGroup;
+			children = (
+				776DE9242A2DFF1D00D39920 /* ListViewController.swift */,
+				7799E0CD2A2F458600528E90 /* List.storyboard */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		77D7E6A52A31EA9B00D109DA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				776DE9282A2E06BC00D39920 /* URLManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		77D7E6A62A31EAA700D109DA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				776374922A2F798B000274EA /* CoreDataManager.swift */,
+				7763748F2A2F7746000274EA /* Progetto_test_fantacalcio.xcdatamodeld */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,6 +487,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,6 +516,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
